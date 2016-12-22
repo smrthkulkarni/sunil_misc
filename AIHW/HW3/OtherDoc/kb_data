@@ -1,0 +1,183 @@
+~Ax|Hx
+~Dxy|~Hy
+~Bxy|Ax
+~Cxy|Ax
+BJohnAlice
+BJohnBob
+~Dxy|Cxy
+~Qy|Cxy
+DJohnAlice
+QBob
+DJohnBob
+~Fx|Gx
+~Gx|Hx
+~Hx|Fx
+~Rx|Hx
+RTom
+~FBob
+{
+	'NON_NEGATION_PREDICATE': {
+		'A': [
+			['A', [LexToken(PREDICATE, 'A', 1, 18), LexToken(VARIABLE, 'x', 1, 20)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'B', 1, 2), LexToken(VARIABLE, 'x', 1, 4), LexToken(VARIABLE, 'y', 1, 6), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'A', 1, 18), LexToken(VARIABLE, 'x', 1, 20)], 2
+			],
+			['A', [LexToken(PREDICATE, 'A', 1, 18), LexToken(VARIABLE, 'x', 1, 20)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'C', 1, 9), LexToken(VARIABLE, 'x', 1, 11), LexToken(VARIABLE, 'y', 1, 13), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'A', 1, 18), LexToken(VARIABLE, 'x', 1, 20)], 3
+			]
+		],
+		'C': [
+			['C', [LexToken(PREDICATE, 'C', 1, 16), LexToken(VARIABLE, 'x', 1, 18), LexToken(VARIABLE, 'y', 1, 20)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'D', 1, 2), LexToken(VARIABLE, 'x', 1, 4), LexToken(VARIABLE, 'y', 1, 6), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'C', 1, 16), LexToken(VARIABLE, 'x', 1, 18), LexToken(VARIABLE, 'y', 1, 20)], 6
+			],
+			['C', [LexToken(PREDICATE, 'C', 1, 16), LexToken(VARIABLE, 'x', 1, 18), LexToken(VARIABLE, 'y', 1, 20)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'Q', 1, 9), LexToken(VARIABLE, 'y', 1, 11), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'C', 1, 16), LexToken(VARIABLE, 'x', 1, 18), LexToken(VARIABLE, 'y', 1, 20)], 7
+			]
+		],
+		'B': [
+			['B', [LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)],
+				[LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)], 4
+			],
+			['B', [LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)],
+				[LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)], 5
+			]
+		],
+		'D': [
+			['D', [LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)],
+				[LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)], 8
+			],
+			['D', [LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)],
+				[LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)], 10
+			]
+		],
+		'G': [
+			['G', [LexToken(PREDICATE, 'G', 1, 7), LexToken(VARIABLE, 'x', 1, 9)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'F', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'G', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 11
+			]
+		],
+		'F': [
+			['F', [LexToken(PREDICATE, 'F', 1, 7), LexToken(VARIABLE, 'x', 1, 9)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'H', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'F', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 13
+			]
+		],
+		'H': [
+			['H', [LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'A', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 0
+			],
+			['H', [LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'G', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 12
+			],
+			['H', [LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'R', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 14
+			]
+		],
+		'Q': [
+			['Q', [LexToken(PREDICATE, 'Q', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)],
+				[LexToken(PREDICATE, 'Q', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)], 9
+			]
+		],
+		'R': [
+			['R', [LexToken(PREDICATE, 'R', 1, 0), LexToken(CONSTANT, 'Tom', 1, 2)],
+				[LexToken(PREDICATE, 'R', 1, 0), LexToken(CONSTANT, 'Tom', 1, 2)], 15
+			]
+		]
+	},
+	'CONSTANT_PREDICATE': {
+		'Bob': [
+			['Bob', [LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)],
+				[LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)], 5
+			],
+			['Bob', [LexToken(PREDICATE, 'Q', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)],
+				[LexToken(PREDICATE, 'Q', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)], 9
+			],
+			['Bob', [LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)],
+				[LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)], 10
+			],
+			['Bob', [LexToken(PREDICATE, 'F', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)],
+				[LexToken(PREDICATE, 'F', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)], 17
+			]
+		],
+		'John': [
+			['John', [LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)],
+				[LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)], 4
+			],
+			['John', [LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)],
+				[LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)], 5
+			],
+			['John', [LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)],
+				[LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)], 8
+			],
+			['John', [LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)],
+				[LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Bob', 1, 7)], 10
+			]
+		],
+		'Alice': [
+			['Alice', [LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)],
+				[LexToken(PREDICATE, 'B', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)], 4
+			],
+			['Alice', [LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)],
+				[LexToken(PREDICATE, 'D', 1, 0), LexToken(CONSTANT, 'John', 1, 2), LexToken(CONSTANT, 'Alice', 1, 7)], 8
+			]
+		],
+		'Tom': [
+			['Tom', [LexToken(PREDICATE, 'R', 1, 0), LexToken(CONSTANT, 'Tom', 1, 2)],
+				[LexToken(PREDICATE, 'R', 1, 0), LexToken(CONSTANT, 'Tom', 1, 2)], 15
+			]
+		]
+	},
+	'NEGATION_PREDICATE': {
+		'A': [
+			['A', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'A', 1, 1), LexToken(VARIABLE, 'x', 1, 3)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'A', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 0
+			]
+		],
+		'C': [
+			['C', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'C', 1, 9), LexToken(VARIABLE, 'x', 1, 11), LexToken(VARIABLE, 'y', 1, 13)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'C', 1, 9), LexToken(VARIABLE, 'x', 1, 11), LexToken(VARIABLE, 'y', 1, 13), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'A', 1, 18), LexToken(VARIABLE, 'x', 1, 20)], 3
+			]
+		],
+		'B': [
+			['B', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'B', 1, 2), LexToken(VARIABLE, 'x', 1, 4), LexToken(VARIABLE, 'y', 1, 6)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'B', 1, 2), LexToken(VARIABLE, 'x', 1, 4), LexToken(VARIABLE, 'y', 1, 6), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'A', 1, 18), LexToken(VARIABLE, 'x', 1, 20)], 2
+			]
+		],
+		'D': [
+			['D', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'D', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(VARIABLE, 'y', 1, 5)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'D', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(VARIABLE, 'y', 1, 5), LexToken(OR, '|', -1, -1), LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'H', 1, 12), LexToken(VARIABLE, 'y', 1, 14)], 1
+			],
+			['D', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'D', 1, 2), LexToken(VARIABLE, 'x', 1, 4), LexToken(VARIABLE, 'y', 1, 6)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'D', 1, 2), LexToken(VARIABLE, 'x', 1, 4), LexToken(VARIABLE, 'y', 1, 6), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'C', 1, 16), LexToken(VARIABLE, 'x', 1, 18), LexToken(VARIABLE, 'y', 1, 20)], 6
+			]
+		],
+		'G': [
+			['G', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'G', 1, 1), LexToken(VARIABLE, 'x', 1, 3)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'G', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 12
+			]
+		],
+		'F': [
+			['F', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'F', 1, 1), LexToken(VARIABLE, 'x', 1, 3)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'F', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'G', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 11
+			],
+			['F', [LexToken(PREDICATE, 'F', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)],
+				[LexToken(PREDICATE, 'F', 1, 0), LexToken(CONSTANT, 'Bob', 1, 2)], 17
+			]
+		],
+		'H': [
+			['H', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'H', 1, 12), LexToken(VARIABLE, 'y', 1, 14)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'D', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(VARIABLE, 'y', 1, 5), LexToken(OR, '|', -1, -1), LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'H', 1, 12), LexToken(VARIABLE, 'y', 1, 14)], 1
+			],
+			['H', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'H', 1, 1), LexToken(VARIABLE, 'x', 1, 3)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'H', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'F', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 13
+			]
+		],
+		'Q': [
+			['Q', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'Q', 1, 9), LexToken(VARIABLE, 'y', 1, 11)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'Q', 1, 9), LexToken(VARIABLE, 'y', 1, 11), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'C', 1, 16), LexToken(VARIABLE, 'x', 1, 18), LexToken(VARIABLE, 'y', 1, 20)], 7
+			]
+		],
+		'R': [
+			['R', [LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'R', 1, 1), LexToken(VARIABLE, 'x', 1, 3)],
+				[LexToken(NOT, '~', -1, -1), LexToken(PREDICATE, 'R', 1, 1), LexToken(VARIABLE, 'x', 1, 3), LexToken(OR, '|', -1, -1), LexToken(PREDICATE, 'H', 1, 7), LexToken(VARIABLE, 'x', 1, 9)], 14
+			]
+		]
+	}
+}

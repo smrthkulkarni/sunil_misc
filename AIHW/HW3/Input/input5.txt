@@ -1,0 +1,7 @@
+1
+Sneeze(Mary)
+4
+(Allergies(x) => Sneeze(x))
+((Cat(y) & Allergictocats(x)) => Allergies(x))
+Cat(Felix)
+Allergictocats(Mary)

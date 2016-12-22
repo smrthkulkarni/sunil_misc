@@ -1,0 +1,11 @@
+1
+~B(Bob,John)
+8
+A(John)
+(A(x) => C(x))
+D(Bob)
+(D(x) => A(x))
+((A(x) & D(y)) => (B(x,y) | (~E(x,y))))
+B(y,x)
+(((C(x) & C(y)) & F(x,y)) => (~ B(y,x)))
+F(John,Bob)

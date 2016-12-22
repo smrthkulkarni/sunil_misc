@@ -1,0 +1,168 @@
+1) ((A(x) => B(x)) => ((Ghost(y) | Devil(j)) & Kill(Hell)))
+Postfix: AxBx=>GhostyDevilj|KillHell&=>
+Implication Removal: ~~Ax~Bx&GhostyDevilj|KillHell&|
+Normalize Double Negation: Ax~Bx&GhostyDevilj|KillHell&|
+Same Operators: False
+Apply Distribution: AxGhostyDevilj||~BxGhostyDevilj||&AxKillHell|~BxKillHell|&&
+Normalized:
+Ax|Ghosty|Devilj
+~Bx|Ghosty|Devilj
+Ax|KillHell
+~Bx|KillHell
+
+
+2)  (A(x) => B(x))
+Postfix: AxBx=>
+Implication Removal: ~AxBx|
+Normalize Double Negation: ~AxBx|
+Same Operators: True
+Apply Distribution: ~Ax|Bx
+Normalized:
+~Ax|Bx
+
+
+3)  ((A(x) & C(x)) => B(x))
+Postfix: AxCx&Bx=>
+Implication Removal: ~Ax~Cx|Bx|
+Normalize Double Negation: ~Ax~Cx|Bx|
+Same Operators: True
+Apply Distribution: ~Ax|~Cx|Bx
+Normalized:
+~Ax|~Cx|Bx
+
+
+4)  (F(x)|(((A(x)&C(x))=>B(x))|E(x)))
+Postfix: FxAxCx&Bx=>Ex||
+Implication Removal: Fx~Ax~Cx|Bx|Ex||
+Normalize Double Negation: Fx~Ax~Cx|Bx|Ex||
+Same Operators: True
+Apply Distribution: Fx|~Ax|~Cx|Bx|Ex
+Normalized:
+Fx|~Ax|~Cx|Bx|Ex
+
+
+5) (A(m, Sunil) | (B(x, y) & C(a, b)))
+Postfix: AmSunilBxyCab&|
+Implication Removal: AmSunilBxyCab&|
+Normalize Double Negation: AmSunilBxyCab&|
+Same Operators: False
+Apply Distribution: BxyAmSunil|CabAmSunil|&
+Normalized:
+Bxy|AmSunil
+Cab|AmSunil
+
+6) ((A(m, Sunil) & B(x, y)) | (E(a, b) & F(p, q)))
+Postfix: AmSunilBxy&EabFpq&|
+Implication Removal: AmSunilBxy&EabFpq&|
+Normalize Double Negation: AmSunilBxy&EabFpq&|
+Same Operators: False
+Apply Distribution: AmSunilEab|BxyEab|&AmSunilFpq|BxyFpq|&&
+Normalized:
+AmSunil|Eab
+Bxy|Eab
+AmSunil|Fpq
+Bxy|Fpq
+
+
+7) ((B(x, y) & C(a, b)) | A(m, Sunil))
+Postfix: BxyCab&AmSunil|
+Implication Removal: BxyCab&AmSunil|
+Normalize Double Negation: BxyCab&AmSunil|
+Same Operators: False
+Apply Distribution: BxyAmSunil|CabAmSunil|&
+Normalized:
+Bxy|AmSunil
+Cab|AmSunil
+
+
+8)  ( ( ((B(x, y) & C(a, b)) | A(m, Sunil)) | E(p,q)) | F(r, s))
+Postfix: BxyCab&AmSunil|Epq|Frs|
+Implication Removal: BxyCab&AmSunil|Epq|Frs|
+Normalize Double Negation: BxyCab&AmSunil|Epq|Frs|
+Same Operators: False
+Apply Distribution: BxyAmSunil|Epq|Frs|CabAmSunil|Epq|Frs|&
+Normalized:
+Bxy|AmSunil|Epq|Frs
+Cab|AmSunil|Epq|Frs
+
+
+8)  ((B(x, y) & C(a, b)) | (A(m, Sunil) | E(p,q)))
+Postfix: BxyCab&AmSunilEpq||
+Implication Removal: BxyCab&AmSunilEpq||
+Normalize Double Negation: BxyCab&AmSunilEpq||
+Same Operators: False
+Apply Distribution: BxyAmSunilEpq||CabAmSunilEpq||&
+Normalized:
+Bxy|AmSunil|Epq
+Cab|AmSunil|Epq
+
+
+9) ((G(q) & H(r)) | (((A(m) | B(n)) | C(o)) | D(p)))
+Postfix: GqHr&AmBn|Co|Dp||
+Implication Removal: GqHr&AmBn|Co|Dp||
+Normalize Double Negation: GqHr&AmBn|Co|Dp||
+Same Operators: False
+Apply Distribution: GqAmBn|Co|Dp||HrAmBn|Co|Dp||&
+Normalized:
+Gq|Am|Bn|Co|Dp
+Hr|Am|Bn|Co|Dp
+
+10) ((G(q) & H(r)) | (((A(m) & B(n)) | C(o)) & D(p)))
+Postfix: GqHr&AmBn&Co|Dp&|
+Implication Removal: GqHr&AmBn&Co|Dp&|
+Normalize Double Negation: GqHr&AmBn&Co|Dp&|
+Same Operators: False
+Apply Distribution: GqAmCo||HrAmCo||&GqBnCo||HrBnCo||&&GqDp|HrDp|&&
+Normalized:
+Gq|Am|Co
+Hr|Am|Co
+Gq|Bn|Co
+Hr|Bn|Co
+Gq|Dp
+Hr|Dp
+
+11) ((~A(l,m)|B(p,q)) => (C(x,y) & ~D(p,q)))
+Alm|Cxy
+~Bpq|Cxy
+Alm|~Dpq
+~Bpq|~Dpq 
+
+12) ((~A(l,m)|B(p,q)) => (A(l,m) & ~B(p,q)))
+Alm
+~Bpq|Alm
+Alm|~Bpq
+~Bpq
+
+13) ((~A(l,m)|B(p,q)) => (A(l,r) & ~B(p,q)))
+Alm|Alr
+~Bpq|Alr
+Alm|~Bpq
+~Bpq
+
+14) ((D(p) & H(r)) | (((C(o) & B(n)) | C(o)) & D(p)))
+
+Things changed Gq to Dp.... Am to Co
+((G(q) & H(r)) | (((A(m) & B(n)) | C(o)) & D(p)))
+Gq|Am|Co
+Hr|Am|Co
+Gq|Bn|Co
+Hr|Bn|Co
+Gq|Dp
+Hr|Dp
+
+((D(p) & H(r)) | (((C(o) & B(n)) | C(o)) & D(p)))
+Dp|Co
+Hr|Co
+Dp|Bn|Co
+Hr|Bn|Co
+Dp
+Hr|Dp
+
+15) Brothers(Sunil, Gopi)
+BrothersSunilGopi
+
+16) (~(~(~(~(~(Brothers(Sunil, Gopi)))))))
+~BrothersSunilGopi
+
+17) (~(~(~(~(Brothers(Sunil, Gopi))))))
+BrothersSunilGopi

@@ -1,0 +1,6 @@
+2
+B(Harry,Bob)
+B(Bob,Harry)
+2
+((A(x,John,z,p)|A(John,x,p,z))|B(z,p))
+(~A(p,q,Harry,Bob))
